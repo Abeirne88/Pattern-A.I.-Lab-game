@@ -2,7 +2,6 @@
 lab game showing physics and enemy A.I. pattern movement
 
 Project Submission:
-
 • Game Files – The Unity project should be submitted in full.
 
 • PowerPoint Presentation – Students should submit their PowerPoint 
