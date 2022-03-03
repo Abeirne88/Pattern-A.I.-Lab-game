@@ -69,3 +69,4 @@ o The game has a structure.
 ▪ Reward System
 o The level of difficulty increases over levels / time.
 • Pattern Movements – 60%
+
