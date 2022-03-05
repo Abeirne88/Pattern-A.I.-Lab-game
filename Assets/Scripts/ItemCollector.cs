@@ -11,7 +11,8 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private Text cherriesText;
     //in case need to edit it later in the editor
 
-    //[SerializeField] private AudioSource collectionSoundEffect;
+    [SerializeField] private AudioSource collectionSoundEffect;
+    //to add the sound file to the pick up item
 
     private void OnTriggerEnter2D(Collider2D collision)
         //when it collides
@@ -19,7 +20,7 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("Cherry"))
             //if it collides with cherry tag
         {
-            //collectionSoundEffect.Play();
+            collectionSoundEffect.Play();
             //play sound
             Destroy(collision.gameObject);
             //destriy object

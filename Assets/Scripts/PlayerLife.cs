@@ -9,6 +9,7 @@ public class PlayerLife : MonoBehaviour
     private Animator anim;
 
     [SerializeField] private AudioSource deathSoundEffect;
+    //to add the sound file to the death
 
     private void Start()
     {
@@ -19,20 +20,26 @@ public class PlayerLife : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Trap"))
+            //if player collides with object having the trap tag
         {
             Die();
+            //u die
         }
     }
 
     private void Die()
     {
         deathSoundEffect.Play();
+        //play sound
         rb.bodyType = RigidbodyType2D.Static;
+        //so it stops moving after death
         anim.SetTrigger("death");
+        //sets the death animation
     }
-
+   
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //loads current level
     }
 }

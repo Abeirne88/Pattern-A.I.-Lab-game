@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     //holds the different animation states and has assigned values in the animator
 
     [SerializeField] private AudioSource jumpSoundEffect;
+    //to add the jump sound file to the jump movemwent
 
     // Start is called before the first frame update
     private void Start()
@@ -53,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            //jumpSoundEffect.Play();
+            jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
